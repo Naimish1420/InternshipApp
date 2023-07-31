@@ -1,19 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#201a30"
+    android:background="@drawable/custom_background"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/nplogo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <EditText
+        android:id="@+id/main_email"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
+        android:background="@drawable/custom_border"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/mail_logo"
+        android:textColorHint="@color/goldlight"
+        android:textColor="@color/goldlight"
+        android:inputType="textEmailAddress"
+        android:hint="Email Id"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/main_password"
+        android:paddingHorizontal="13dp"
+        android:paddingVertical="10dp"
+        android:background="@drawable/custom_border"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/password_logo"
+        android:textColorHint="@color/goldlight"
+        android:textColor="@color/goldlight"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/main_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:checked="true"
+        android:id="@+id/main_remember"
+        android:buttonTint="@color/gold"
+        android:textColor="@color/goldlight"
+        android:text="Remember Me"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/main_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/main_login"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:backgroundTint="@null"
+        android:background="@drawable/custom_button_white"
+        android:text="Log In"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@id/main_remember"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/main_signup"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:backgroundTint="@null"
+        android:background="@drawable/custom_button_white"
+        android:text="Sign Up"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@id/main_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login Form"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@id/main_signup"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/archivo_bold"
+        android:text="Forget Your Password"
+        android:textColor="@color/goldlight" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
