@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_background"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/signup_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:drawableLeft="@drawable/user"
+            android:inputType="textPersonName"
+            android:hint="Name"
+            style="@style/edit_14"
+            />
+
+
+        <EditText
+            android:id="@+id/signup_email"
+            android:layout_below="@id/signup_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:drawableLeft="@drawable/mail_logo"
+            android:inputType="textEmailAddress"
+            android:hint="Email Id"
+            style="@style/edit_14"
+            />
+
+        <EditText
+            android:id="@+id/signup_contact"
+            android:maxLength="10"
+            android:layout_below="@id/signup_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:drawableLeft="@drawable/add_contact"
+            android:inputType="phone"
+            android:hint="Contact No."
+            style="@style/edit_14"
+            />
+
+        <EditText
+            android:id="@+id/signup_password"
+            android:layout_below="@id/signup_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:drawableLeft="@drawable/password_logo"
+            android:inputType="textPassword"
+            android:hint="Password"
+            style="@style/edit_14"
+            />
+
+        <EditText
+            android:id="@+id/signup_confirm_password"
+            android:layout_below="@id/signup_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:drawableLeft="@drawable/confom_password"
+            android:inputType="textPassword"
+            android:hint=" Confirm Password"
+            style="@style/edit_14"
+            />
+
+        <RadioGroup
+            android:id="@+id/signup_gender"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_below="@id/signup_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/signup_male"
+                android:layout_weight="1"
+                style="@style/radio_14"
+                android:text="Male"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/signup_female"
+                android:layout_weight="1"
+                style="@style/radio_14"
+                android:text="Female"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/signup_city"
+            android:popupBackground="@color/gold"
+            android:background="@color/goldlight"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_below="@id/signup_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:editable="false"
+            android:id="@+id/signup_dob"
+            android:layout_below="@id/signup_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:drawableLeft="@drawable/calendar"
+            android:inputType="textPersonName"
+            android:hint="Date Of Birth"
+            style="@style/edit_14"
+            />
+
+        <Button
+            android:id="@+id/signup_signup"
+            android:layout_below="@id/signup_dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            style="@style/button_s"
+            />
+
+        <Button
+            android:id="@+id/signup_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signup_signup"
+            android:text="Log in"
+            style="@style/button_l"
+            />
+
+
+
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
